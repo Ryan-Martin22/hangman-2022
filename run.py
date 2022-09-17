@@ -21,7 +21,8 @@ def begin_game(word):
     guessed_letters = []
     guessed_words = []
     lives = 6 
-
+    print("Help Me!!!\n")
+    print(f"Lives left {lives}\n")
 
 
 def hangman_construction(lives):
