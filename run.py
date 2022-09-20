@@ -1,5 +1,15 @@
 import random 
 
+class Color:
+    """
+    Sets colors to be called for different texts.
+    """
+    RESET = '\033[0m'
+    BLUE = '\u001b[34m'
+    GREEN = '\033[92m'
+    RED = '\033[91m'
+    YELLOW = '\u001b[33m'
+
 def get_new_word():
     """
     Selects a random word from the words.txt file at the beginning of the game
@@ -40,6 +50,12 @@ def begin_game(word):
             if '_' not in correct_word
                 print("End me!")
                 completed = True
+            elif len(guess) != 1:
+                print(f"\n{Color.YELLOW}Uh oh, "
+                      f"Your only allowed to guess {Color.RESET}1"
+                  f" {Color.YELLOW}letter at a time.")
+                print(f"You used {Color.RESET}{len(guess)} "
+                      f"{Color.YELLOW}characters.\n{Color.RESET}")       
          elif guess in guessed_letters:
              print('You have already used me')
          else:
