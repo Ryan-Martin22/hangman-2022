@@ -65,7 +65,7 @@ def begin_game(word):
                    f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")    
          else:
              print('Please provide a single letter! Behave')
-      if completed:
+    if completed:
         win_graphic()
         print(f"{Color.GREEN}Well Done!"
               "You are a hero!")
@@ -74,10 +74,28 @@ def begin_game(word):
         print("Looks like you arent a hero, "
               "Do NOT quit your day job.")
         print(f"The word was: {Color.RESET}{word}{Color.RED}.{Color.RESET}")
-    restart_game()
-          
-
-
+    start_game_again()
+    
+    
+    
+def start_game_again():
+    """
+    Asks if the user wants to start the game again.
+    If not, returns to main screen.
+    """
+    start_again_option = input(f"\nWould you like to try again? "
+                           f"{Color.BLUE}Y{Color.RESET}/{Color.BLUE}N\n"
+                           f"{Color.RESET}").upper()
+    if start_again_option == "Y":
+        word = new_word()
+        begin_game(word)
+    elif start_again_option == "N":
+        title_screen()
+    else:
+        print(f"{Color.YELLOW}Time to decide {Color.BLUE}Y {Color.YELLOW}"
+              f"or {Color.BLUE}N{Color.YELLOW}. You chose "
+              f"{Color.RESET}{start_again_option}{Color.YELLOW}.{Color.RESET}\n")
+        start_game_again()
 
 def hangman_construction(lives):
     stages = [  # final state: head, torso, both arms, and both legs
