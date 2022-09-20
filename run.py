@@ -47,20 +47,35 @@ def begin_game(word):
             for index in indices:
                word_list[index] = guess
             correct_word= "".join(word_list)
-            if '_' not in correct_word
+            if '_' not in correct_word:
                 print("End me!")
                 completed = True
             elif len(guess) != 1:
-                print(f"\n{Color.YELLOW}Uh oh, "
+                print(f"\n{Color.YELLOW}Oops!, "
                       f"Your only allowed to guess {Color.RESET}1"
                   f" {Color.YELLOW}letter at a time.")
                 print(f"You used {Color.RESET}{len(guess)} "
                       f"{Color.YELLOW}characters.\n{Color.RESET}")       
          elif guess in guessed_letters:
-             print('You have already used me')
+             print(f"\n{Color.YELLOW}You have already  used me"
+             f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
+             lives -= 1
+         else: 
+             print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
+                   f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")    
          else:
              print('Please provide a single letter! Behave')
-    print("You Win!")      
+      if completed:
+        win_graphic()
+        print(f"{Color.GREEN}Well Done!"
+              "You are a hero!")
+    else:
+        lose_graphic()
+        print("Looks like you arent a hero, "
+              "Do NOT quit your day job.")
+        print(f"The word was: {Color.RESET}{word}{Color.RED}.{Color.RESET}")
+    restart_game()
+          
 
 
 
@@ -125,7 +140,7 @@ def hangman_construction(lives):
                    |     
                    -
                 """,
-                # initial empty state
+                # initial empty noose
                 """
                    --------
                    |      |
