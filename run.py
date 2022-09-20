@@ -25,12 +25,27 @@ def begin_game(word):
     print(f"Lives left {lives}\n")
     print(word)
     while completed is not True: 
-      print(correct_word)
-      guess = input('Give me some letters please \n')
-      if len(guess) == 1 and guess.isalpha(
-      ) and guess not in guessed_letters:
-          guessed_letters.append(guess)
-          
+        print(correct_word)
+        guess = input('Give me some letters please \n')
+        if len(guess) == 1 and guess.isalpha(
+        ) and guess not in guessed_letters:
+            guessed_letters.append(guess)
+            word_list = list(correct_word)
+            indices = [
+               i for i, letter in enumerate(word) if letter == guess.upper{}
+            ]
+            for index in indices:
+               word_list[index] = guess
+            correct_word= "".join(word_list)
+            if '_' not in correct_word
+                print("End me!")
+                completed = True
+         elif guess in guessed_letters:
+             print('You have already used me')
+         else:
+             print('Please provide a single letter! Behave')
+    print("You Win!")      
+
 
 
 def hangman_construction(lives):
