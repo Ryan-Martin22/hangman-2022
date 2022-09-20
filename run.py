@@ -171,3 +171,58 @@ def hangman_construction(lives):
     ]
     return stages[lives]
 
+
+def title_graphic():
+    """
+    A title graphic to be displayed on the title screen.
+    """
+    print(
+        """
+          ██╗  ██╗█████╗███╗   ██╗██████╗███╗   ███╗█████╗███╗   ██╗
+          ██║  ████╔══██████╗  ████╔════╝████╗ ██████╔══██████╗  ██║
+          ████████████████╔██╗ ████║  █████╔████╔███████████╔██╗ ██║
+          ██╔══████╔══████║╚██╗████║   ████║╚██╔╝████╔══████║╚██╗██║
+          ██║  ████║  ████║ ╚████╚██████╔██║ ╚═╝ ████║  ████║ ╚████║
+          ╚═╝  ╚═╚═╝  ╚═╚═╝  ╚═══╝╚═════╝╚═╝     ╚═╚═╝  ╚═╚═╝  ╚═══                                                                                   
+        """
+    )
+
+
+def win_sign():
+    """
+    Displays a win sign for when the player correctly guesses the word
+    to let them know they were correct.
+    """
+    print(
+          f"""{Color.GREEN}
+               :::       ::: ::::::::::: ::::    ::: 
+   :+:       :+:     :+:     :+:+:   :+:  
+  +:+       +:+     +:+     :+:+:+  +:+   
+ +#+  +:+  +#+     +#+     +#+ +:+ +#+    
++#+ +#+#+ +#+     +#+     +#+  +#+#+#     
+#+#+# #+#+#      #+#     #+#   #+#+#      
+###   ###   ########### ###    ####  
+            
+        {Color.RESET}"""
+          )
+
+
+def fail_sign():
+    """
+    Displays a lose sign for when the player fails to guess the word
+    to let them know the lost the game.
+    """
+    print(
+          f"""{Color.RED}
+                 ::::::::::   :::     ::::::::::: :::  
+                :+:        :+: :+:       :+:     :+:   
+              +:+       +:+   +:+      +:+     +:+    
+            :#::+::#  +#++:++#++:     +#+    +#+     
+          +#+       +#+    +#+     +#+     +#+      
+        #+#      #+#     #+#     #+#     #+#       
+      ###      ###      ### ########### ########## 
+        {Color.RESET}"""
+          )
+
+
+title_screen()
