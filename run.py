@@ -66,11 +66,11 @@ def begin_game(word):
          else:
              print('Please provide a single letter! Behave')
     if completed:
-        win_graphic()
+        win_sign()
         print(f"{Color.GREEN}Well Done!"
               "You are a hero!")
     else:
-        lose_graphic()
+        lose_sign()
         print("Looks like you arent a hero, "
               "Do NOT quit your day job.")
         print(f"The word was: {Color.RESET}{word}{Color.RED}.{Color.RESET}")
@@ -214,12 +214,12 @@ def fail_sign():
     """
     print(
           f"""{Color.RED}
-                 ::::::::::   :::     ::::::::::: :::  
-                :+:        :+: :+:       :+:     :+:   
-              +:+       +:+   +:+      +:+     +:+    
-            :#::+::#  +#++:++#++:     +#+    +#+     
-          +#+       +#+    +#+     +#+     +#+      
-        #+#      #+#     #+#     #+#     #+#       
+            ::::::::::   :::     ::::::::::: :::  
+           :+:        :+: :+:       :+:     :+:   
+          +:+       +:+   +:+      +:+     +:+    
+         :#::+::#  +#++:++#++:     +#+    +#+     
+        +#+       +#+    +#+     +#+     +#+      
+       #+#      #+#     #+#     #+#     #+#       
       ###      ###      ### ########### ########## 
         {Color.RESET}"""
           )
