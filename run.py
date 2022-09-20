@@ -23,6 +23,14 @@ def begin_game(word):
     lives = 6 
     print("Help Me!!!\n")
     print(f"Lives left {lives}\n")
+    print(word)
+    while completed is not True: 
+      print(correct_word)
+      guess = input('Give me some letters please \n')
+      if len(guess) == 1 and guess.isalpha(
+      ) and guess not in guessed_letters:
+          guessed_letters.append(guess)
+          
 
 
 def hangman_construction(lives):
