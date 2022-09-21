@@ -80,7 +80,7 @@ def begin_game(word):
     lives = 6 
     print("Help Me!!!\n")
     print(f"Lives left {lives}\n")
-    print(hangman_construction(lives)(lives))
+    print(hangman_construction(lives))
     while completed is not True: 
         print(correct_word)
         guess = input('Give me some letters please \n')
