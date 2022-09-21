@@ -99,7 +99,7 @@ def begin_game(word):
             else len(guess) != 1:
             print(f"\n{Color.YELLOW}Oops!, "
                  f"Your only allowed to guess {Color.RESET}1"
-                      f" {Color.YELLOW}letter at a time.")
+                 f" {Color.YELLOW}letter at a time.")
             print(f"You used {Color.RESET}{len(guess)} "
                  f"{Color.YELLOW}characters.\n{Color.RESET}")       
         elif guess in guessed_letters:
@@ -278,7 +278,7 @@ def win_sign():
 ###   ###   ########### ###    ####  
             
         {Color.RESET}"""
-          )
+        )
 
 
 def lose_sign():
@@ -296,7 +296,7 @@ def lose_sign():
        #+#      #+#     #+#     #+#     #+#       
       ###      ###      ### ########### ########## 
         {Color.RESET}"""
-          )
+        )
 
 
 introduction_page()
