@@ -21,6 +21,15 @@ def get_new_word():
     return any_word 
 
 
+def introduction_page():
+    """
+    The initial introduction to the hangman game.
+    The player can select to read the instuctions or begin the game straight away.
+    """    
+    word = get_new_word()
+
+
+
 def begin_game(word):
     """
     Starts the game for the user
@@ -172,7 +181,7 @@ def hangman_construction(lives):
     return stages[lives]
 
 
-def title_graphic():
+def hangman_sign():
     """
     A title graphic to be displayed on the title screen.
     """
