@@ -104,7 +104,7 @@ def begin_game(word):
                   f" {Color.YELLOW}letter at a time.")
                 print(f"You used {Color.RESET}{len(guess)} "
                       f"{Color.YELLOW}characters.\n{Color.RESET}")       
-         elif guess in guessed_letters:
+            elif guess in guessed_letters:
              print(f"\n{Color.YELLOW}You have already  used me"
              f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
              lives -= 1
