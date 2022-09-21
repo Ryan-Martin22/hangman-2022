@@ -33,7 +33,7 @@ def introduction_page():
     print(f"Type {Color.BLUE}2 {Color.RESET} if you would like to read the instructions")
     selection = False 
     while not selection:
-        decision = input(" \n")
+        decision = input("\n")
         if decision == "1":
             selection = True
             begin_game(word)
@@ -80,7 +80,6 @@ def begin_game(word):
     lives = 6 
     print("Help Me!!!\n")
     print(f"Lives left {lives}\n")
-    print(word)
     while completed is not True: 
         print(correct_word)
         guess = input('Give me some letters please \n')
