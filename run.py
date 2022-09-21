@@ -96,7 +96,7 @@ def begin_game(word):
             if '_' not in correct_word:
                 print("End me!")
                 completed = True
-            else len(guess) != 1:
+        elif len(guess) != 1:
             print(f"\n{Color.YELLOW}Oops!, "
                  f"Your only allowed to guess {Color.RESET}1"
                  f" {Color.YELLOW}letter at a time.")
