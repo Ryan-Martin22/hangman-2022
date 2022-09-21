@@ -27,13 +27,35 @@ def introduction_page():
     The player can select to read the instuctions or begin the game straight away.
     """    
     word = get_new_word()
+    hangman_sign()
+    print(hangman_sign(0))
+    print(f"Type {Color.BLUE}1 {Color.RESET} to start the game\n")
+    print(f"Type {Color.BLUE}2 {Color.RESET} if you would like to read the instructions")
+    selection = False 
+    while not selection:
+        decision = input(" \n")
+        if decision == "1":
+            selection = True
+            begin_game(word)
+        elif decision == "2":
+            selection = True
+            game_instructions()
+        else:
+            print(f"\n{Color.YELLOW}Please type {Color.BLUE}1 {Color.YELLOW}or"
+                  f"{Color.BLUE} 2 {Color.YELLOW}to make your decision."
+                  f"{Color.RESET}")
+
 
 
 
 def begin_game(word):
     """
-    Starts the game for the user
-
+    Starts the game for the user 
+    checks if the letter the player inputs is in the hidden word.
+    if the letter is correct,game will iterate through hidden word and letter will go into
+    correct position. if incorrect,a message will be relayed to the user.
+    player can see how many lives are left to complete the game.
+    
     """
     correct_word = "_" * len(word)
     completed = False
@@ -234,4 +256,4 @@ def fail_sign():
           )
 
 
-title_screen()
+introduction_page()
