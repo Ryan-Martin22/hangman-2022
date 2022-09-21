@@ -114,8 +114,8 @@ def begin_game(word):
         else: 
             print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
                  f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
-            print(hangman_construction(lives))
-            print(f"Lives left: {lives}\n")
+        print(hangman_construction(lives))
+        print(f"Lives left: {lives}\n")
     if completed:
         win_sign()
         print(f"{Color.GREEN}Well Done!"
