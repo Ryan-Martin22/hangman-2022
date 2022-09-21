@@ -28,7 +28,7 @@ def introduction_page():
     """    
     word = get_new_word()
     hangman_sign()
-    print(hangman_sign(0))
+    print(hangman_sign())
     print(f"Type {Color.BLUE}1 {Color.RESET} to start the game\n")
     print(f"Type {Color.BLUE}2 {Color.RESET} if you would like to read the instructions")
     selection = False 
@@ -143,76 +143,102 @@ def start_game_again():
         start_game_again()
 
 def hangman_construction(lives):
-    stages = [  # final state: head, torso, both arms, and both legs
-                """
-                   --------
-                   |      |
-                   |      O
-                   |     \\|/
-                   |      |
-                   |     / \\
-                   -
-                """,
-                # head, torso, both arms, and one leg
-                """
-                   --------
-                   |      |
-                   |      O
-                   |     \\|/
-                   |      |
-                   |     / 
-                   -
-                """,
-                # head, torso, and both arms
-                """
-                   --------
-                   |      |
-                   |      O
-                   |     \\|/
-                   |      |
-                   |      
-                   -
-                """,
-                # head, torso, and one arm
-                """
-                   --------
-                   |      |
-                   |      O
-                   |     \\|
-                   |      |
-                   |     
-                   -
-                """,
-                # head and torso
-                """
-                   --------
-                   |      |
-                   |      O
-                   |      |
-                   |      |
-                   |     
-                   -
-                """,
-                # head
-                """
-                   --------
-                   |      |
-                   |      O
-                   |    
-                   |      
-                   |     
-                   -
-                """,
-                # initial empty noose
-                """
-                   --------
-                   |      |
-                   |      
-                   |    
-                   |      
-                   |     
-                   -
-                """
+
+    """
+    Shows the user how man lives are left before the games ends.
+    """
+    stages = [
+        f"""
+              =======
+              |/    |
+              |     {Color.RED}@{Color.RESET}
+              |    /|\\
+              |     |
+              |    / \\
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        f"""
+              =======
+              |/    |
+              |     {Color.RED}@{Color.RESET}
+              |    /|\\
+              |     |
+              |    /
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        f"""
+              =======
+              |/    |
+              |     {Color.RED}@{Color.RESET}
+              |    /|\\
+              |     |
+              |
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        f"""
+              =======
+              |/    |
+              |     {Color.RED}@{Color.RESET}
+              |    /|
+              |     |
+              |
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        f"""
+              =======
+              |/    |
+              |     {Color.RED}@{Color.RESET}
+              |     |
+              |     |
+              |
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        f"""
+              =======
+              |/    |
+              |     {Color.RED}@{Color.RESET}
+              |
+              |
+              |
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """,
+        """
+              =======
+              |/    |
+              |
+              |
+              |
+              |
+         _____|_________
+        /     |\\        /|
+        ______________ / /
+                      | /
+        ______________ /
+        """
     ]
     return stages[lives]
 
