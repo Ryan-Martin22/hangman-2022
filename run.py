@@ -45,7 +45,9 @@ def introduction_page():
                   f"{Color.BLUE} 2 {Color.YELLOW}to make your decision."
                   f"{Color.RESET}")
 
-
+              
+def game_instructions 
+    
 
 
 def begin_game(word):
