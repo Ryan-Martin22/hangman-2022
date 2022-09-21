@@ -94,6 +94,8 @@ def begin_game(word):
             for index in indices:
                 word_list[index] = guess
                 correct_word = "".join(word_list)
+                print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
+                     f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
             if '_' not in correct_word:
                 print("End me!")
                 completed = True
