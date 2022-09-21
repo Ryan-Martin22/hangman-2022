@@ -28,7 +28,7 @@ def introduction_page():
     """    
     word = get_new_word()
     hangman_sign()
-    print(hangman_sign())
+    print(hangman_sign(0))
     print(f"Type {Color.BLUE}1 {Color.RESET} to start the game\n")
     print(f"Type {Color.BLUE}2 {Color.RESET} if you would like to read the instructions")
     selection = False 
@@ -93,8 +93,8 @@ def begin_game(word):
                i for i, letter in enumerate(word) if letter == guess.upper()
             ]
             for index in indices:
-               word_list[index] = guess
-            correct_word= "".join(word_list)
+                word_list[index] = guess
+                correct_word = "".join(word_list)
             if '_' not in correct_word:
                 print("End me!")
                 completed = True
@@ -105,11 +105,11 @@ def begin_game(word):
                 print(f"You used {Color.RESET}{len(guess)} "
                       f"{Color.YELLOW}characters.\n{Color.RESET}")       
             elif guess in guessed_letters:
-             print(f"\n{Color.YELLOW}You have already  used me"
+            print(f"\n{Color.YELLOW}You have already  used me"
              f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
              lives -= 1
             else: 
-             print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
+            print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
                    f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
     if completed:
         win_sign()
