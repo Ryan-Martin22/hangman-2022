@@ -88,6 +88,8 @@ def begin_game(word):
         ) and guess not in guessed_letters:
             guessed_letters.append(guess)
             word_list = list(correct_word)
+            print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
+                 f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
             indices = [
                i for i, letter in enumerate(word) if letter == guess.upper()
             ]
@@ -113,10 +115,8 @@ def begin_game(word):
             lives -= 1
             guessed_letters.append(guess)    
         else: 
-            print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
-                 f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
-        print(hangman_construction(lives))
-        print(f"Lives left: {lives}\n")
+            print(hangman_construction(lives))
+            print(f"Lives left: {lives}\n")
     if completed:
         win_sign()
         print(f"{Color.GREEN}Well Done!"
