@@ -107,7 +107,7 @@ def begin_game(word):
             print(f"\n{Color.YELLOW}You have already  used me"
                   f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
             lives -= 1      
-        elif guess not in word:
+        elif guess not in word_list:
             print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
                   f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
             lives -= 1
@@ -127,9 +127,8 @@ def begin_game(word):
               "Do NOT quit your day job.")
         print(f"The word was: {Color.RESET}{word}{Color.RED}.{Color.RESET}")
     start_game_again()
-    
-    
-    
+
+
 def start_game_again():
     """
     Asks if the user wants to start the game again.
