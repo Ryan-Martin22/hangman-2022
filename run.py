@@ -61,7 +61,7 @@ def game_instructions():
     )
 
     begin = ("Press the enter key to begin the game.\n")
-    begin_game(word)
+    begin_game()
     
 
 
