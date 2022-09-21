@@ -105,12 +105,12 @@ def begin_game(word):
                 print(f"You used {Color.RESET}{len(guess)} "
                       f"{Color.YELLOW}characters.\n{Color.RESET}")       
             elif guess in guessed_letters:
-            print(f"\n{Color.YELLOW}You have already  used me"
-             f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
-             lives -= 1
-            else: 
+                print(f"\n{Color.YELLOW}You have already  used me"
+                f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
+            lives -= 1
+        else: 
             print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
-                   f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
+            f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
     if completed:
         win_sign()
         print(f"{Color.GREEN}Well Done!"
@@ -133,10 +133,10 @@ def start_game_again():
                            f"{Color.BLUE}Y{Color.RESET}/{Color.BLUE}N\n"
                            f"{Color.RESET}").upper()
     if start_again_option == "Y":
-        word = new_word()
+        word = get_new_word()
         begin_game(word)
     elif start_again_option == "N":
-        title_screen()
+        introduction_page()
     else:
         print(f"{Color.YELLOW}Time to decide {Color.BLUE}Y {Color.YELLOW}"
               f"or {Color.BLUE}N{Color.YELLOW}. You chose "
