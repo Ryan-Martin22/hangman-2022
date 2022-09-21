@@ -253,7 +253,7 @@ def win_sign():
           )
 
 
-def fail_sign():
+def lose_sign():
     """
     Displays a lose sign for when the player fails to guess the word
     to let them know the lost the game.
