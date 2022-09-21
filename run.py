@@ -109,11 +109,12 @@ def begin_game(word):
             print(f"\n{Color.YELLOW}You have already  used me"
                   f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
             lives -= 1      
-        else: guess not in correct_word:
-        print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
+        else:
+            guess not in word:
+            print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
                   f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
-        lives -= 1
-        guessed_letters.append(guess)
+            lives -= 1
+            guessed_letters.append(guess)
     if completed:
         win_sign()
         print(f"{Color.GREEN}Well Done!"
