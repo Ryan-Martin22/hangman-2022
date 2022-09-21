@@ -60,8 +60,8 @@ def game_instructions():
         """
     )
 
-    begin = ("Press the enter key to begin the game.\n")
-    begin_game()
+    begin = input("Press the enter key to begin the game.\n")
+    introduction_page()
     
 
 
