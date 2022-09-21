@@ -96,23 +96,23 @@ def begin_game(word):
             if '_' not in correct_word:
                 print("End me!")
                 completed = True
-            elif len(guess) != 1:
-                print(f"\n{Color.YELLOW}Oops!, "
-                 f"Your only allowed to guess {Color.RESET}1"
-                 f" {Color.YELLOW}letter at a time.")
-                print(f"You used {Color.RESET}{len(guess)} "
-                 f"{Color.YELLOW}characters.\n{Color.RESET}")       
+        elif len(guess) != 1:
+            print(f"\n{Color.YELLOW}Oops!, "
+                f"Your only allowed to guess {Color.RESET}1"
+                f" {Color.YELLOW}letter at a time.")
+            print(f"You used {Color.RESET}{len(guess)} "
+                f"{Color.YELLOW}characters.\n{Color.RESET}")       
         elif guess in guessed_letters:
             print(f"\n{Color.YELLOW}You have already  used me"
-            f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
+                  f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
         elif guess not in word:
             print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
-            f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
+                  f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
             lives -= 1
             guessed_letters.append(guess)    
         else: 
             print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
-            f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
+                 f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
     if completed:
         win_sign()
         print(f"{Color.GREEN}Well Done!"
