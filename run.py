@@ -112,12 +112,11 @@ def begin_game(word):
                   f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
             lives -= 1
             guessed_letters.append(guess)
-        elif guess in word:
+        else: 
             print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
                  f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
-        else: 
-            print(hangman_construction(lives))
-            print(f"Lives left: {lives}\n")
+        print(hangman_construction(lives))
+        print(f"Lives left: {lives}\n")
     if completed:
         win_sign()
         print(f"{Color.GREEN}Well Done!"
