@@ -107,6 +107,11 @@ def begin_game(word):
             print(f"\n{Color.YELLOW}You have already  used me"
             f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
             lives -= 1
+        elif guess not in word:
+            print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
+            f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
+            lives -= 1
+            guessed_letters.append(guess)    
         else: 
             print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
             f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
