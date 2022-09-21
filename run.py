@@ -97,16 +97,15 @@ def begin_game(word):
             if '_' not in correct_word:
                 print("End me!")
                 completed = True
-            elif len(guess) != 1:
+            else len(guess) != 1:
                 print(f"\n{Color.YELLOW}Oops!, "
                       f"Your only allowed to guess {Color.RESET}1"
                       f" {Color.YELLOW}letter at a time.")
                 print(f"You used {Color.RESET}{len(guess)} "
                       f"{Color.YELLOW}characters.\n{Color.RESET}")       
-        elif guess in guessed_letters:
+        if guess in guessed_letters:
             print(f"\n{Color.YELLOW}You have already  used me"
             f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
-            lives -= 1
         elif guess not in word:
             print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
             f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
