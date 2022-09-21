@@ -46,7 +46,22 @@ def introduction_page():
                   f"{Color.RESET}")
 
               
-def game_instructions 
+def game_instructions():
+    """
+    Gives the player the instructions to play the game. 
+    """
+    print(
+        """
+        The object of the game is to guess the word.
+        Do this by entering in one letter each go.
+        If you enter a wrong letter a life will be taken from you.
+        If you lose all your lives, say goodbye to the hanging individual.
+        Guess the word before your lives hit 0 and you are a hero.
+        """
+    )
+
+    begin = ("Press the enter key to begin the game.\n")
+    introduction_page()    
     
 
 
