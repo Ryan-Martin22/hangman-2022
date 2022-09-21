@@ -108,10 +108,10 @@ def begin_game(word):
              print(f"\n{Color.YELLOW}You have already  used me"
              f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
              lives -= 1
-         else: 
+            else: 
              print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
                    f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")    
-         else:
+            else:
              print('Please provide a single letter! Behave')
     if completed:
         win_sign()
