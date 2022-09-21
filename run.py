@@ -110,9 +110,7 @@ def begin_game(word):
              lives -= 1
             else: 
              print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
-                   f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")    
-            else:
-             print('Please provide a single letter! Behave')
+                   f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
     if completed:
         win_sign()
         print(f"{Color.GREEN}Well Done!"
