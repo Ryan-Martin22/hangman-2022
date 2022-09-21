@@ -77,7 +77,6 @@ def begin_game(word):
     correct_word = "_" * len(word)
     completed = False
     guessed_letters = []
-    guessed_words = []
     lives = 6 
     print("Help Me!!!\n")
     print(f"Lives left {lives}\n")
@@ -101,12 +100,12 @@ def begin_game(word):
             elif len(guess) != 1:
                 print(f"\n{Color.YELLOW}Oops!, "
                       f"Your only allowed to guess {Color.RESET}1"
-                  f" {Color.YELLOW}letter at a time.")
+                      f" {Color.YELLOW}letter at a time.")
                 print(f"You used {Color.RESET}{len(guess)} "
                       f"{Color.YELLOW}characters.\n{Color.RESET}")       
-            elif guess in guessed_letters:
-                print(f"\n{Color.YELLOW}You have already  used me"
-                f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
+        elif guess in guessed_letters:
+            print(f"\n{Color.YELLOW}You have already  used me"
+            f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
             lives -= 1
         else: 
             print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
