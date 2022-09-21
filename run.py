@@ -90,7 +90,7 @@ def begin_game(word):
             guessed_letters.append(guess)
             word_list = list(correct_word)
             indices = [
-               i for i, letter in enumerate(word) if letter == guess.upper{}
+               i for i, letter in enumerate(word) if letter == guess.upper()
             ]
             for index in indices:
                word_list[index] = guess
