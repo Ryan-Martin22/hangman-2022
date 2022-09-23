@@ -36,7 +36,10 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 
 ### Correct Guess 
 
-* 
+* When the user inputs a correct guess, he or she will be freeted with a green message telling them it was correct.
+* No lives will be taken from the user and the hangman structure will remain empty. 
+
+![Correct Guess](assets/images/Correct-guess.png)
 
 ### Wrong Guess 
  
@@ -45,6 +48,13 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 * The user will also be show the letters that have been already guessed to prevent the user from guessing the same letter. 
 
 ![Wrong Guess](assets/images/wrong-guess.png)
+
+### Guessed the same letter 
+
+* If the user guesses a letter he or she has already guessed, he or she will be shown a message stating that fact and also what letter the have guessed already. 
+* No lives will be taken from the user and the hangman will remain the same. The message is presented in yellow to avt as a warning to the user. 
+
+![Already Guessed](assets/images/already-guessed.png)
 
 
 
