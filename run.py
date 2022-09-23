@@ -97,9 +97,15 @@ def begin_game(word):
                     correct_word = "".join(word_list)
                     print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
                          f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
-            if '_' not in correct_word:
-                print("End me!")
-                completed = True
+                if '_' not in correct_word:
+                    print("End me!")
+                    completed = True   
+            else:
+                print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
+                f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
+                lives -= 1
+                print(lives)
+                guessed_letters.append(guess)        
         elif len(guess) != 1:
             print(f"\n{Color.YELLOW}Oops!, "
                 f"Your only allowed to guess {Color.RESET}1"
@@ -110,12 +116,6 @@ def begin_game(word):
             print(f"\n{Color.YELLOW}You have already  used me"
                   f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
             lives -= 1      
-        elif guess not in word:
-            print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
-                  f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
-            lives -= 1
-            print(lives)
-            guessed_letters.append(guess)
     if completed:
         win_sign()
         print(f"{Color.GREEN}Well Done!"
