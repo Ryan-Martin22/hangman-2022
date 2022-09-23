@@ -106,7 +106,7 @@ def begin_game(word):
                 lives -= 1
                 print(lives)
                 guessed_letters.append(guess)
-                print("Letters tried: " + ", ".join(guessed_letters) + "\n")       
+                print("You have already tried these: " + ", ".join(guessed_letters) + "\n")       
         elif len(guess) != 1:
             print(f"\n{Color.YELLOW}Oops!, "
                 f"Your only allowed to guess {Color.RESET}1"
