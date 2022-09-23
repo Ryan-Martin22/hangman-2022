@@ -104,7 +104,7 @@ def begin_game(word):
                 print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
                 f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
                 lives -= 1
-                print(lives)
+                print(f"Lives left: {lives} \n")
                 guessed_letters.append(guess)
                 print("You have already tried these: " + ", ".join(guessed_letters) + "\n")       
         elif len(guess) != 1:
