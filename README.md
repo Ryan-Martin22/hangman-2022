@@ -8,6 +8,16 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 
 ![Title Sceen](assets/images/Main-screen.png)
 
+# Structure 
+* The game is run via a mock terminal on a web page. 
+* The user is only required to input one character follwed by the Enter Key. 
+
+## Logic Flow
+
+* I created a visual flow chart in order to develop the logic behind the game and ensure each function would work accordingly depending on the users input. 
+
+![Logic flow](assets/images/flow%20chart.png)
+
 # Features 
 
 ## Existing Features 
