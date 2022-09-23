@@ -105,7 +105,8 @@ def begin_game(word):
                 f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
                 lives -= 1
                 print(lives)
-                guessed_letters.append(guess)        
+                guessed_letters.append(guess)
+                print("Letters tried: " + ", ".join(guessed_letters) + "\n")       
         elif len(guess) != 1:
             print(f"\n{Color.YELLOW}Oops!, "
                 f"Your only allowed to guess {Color.RESET}1"
