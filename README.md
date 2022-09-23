@@ -88,5 +88,15 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 
 ![Lose](assets/images/lose.png)
 
+# Technologies Used 
+
+## Languages 
+
+* Python - Used to create all the games code. 
+* HTML - Code Institute template.
+* JavaScript - Code Institute template. 
+
+
+
 
 
