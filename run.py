@@ -15,8 +15,8 @@ def get_new_word():
     Selects a random word from the words.txt file at the beginning of the game
     and ensures a new random word evry time the game is played.
     """
-    with open('words.txt', 'r') as h:
-        words = h.readlines()
+    with open('words.txt', 'r') as word_list:
+        words = word_list.readlines()
     any_word = random.choice(words)[:-1].upper()
     return any_word 
 
@@ -80,22 +80,23 @@ def begin_game(word):
     lives = 6 
     print("Help Me!!!\n")
     print(f"Lives left {lives}\n")
-    print(hangman_construction(lives))
     while completed is not True: 
+        print(hangman_construction(lives))
         print(correct_word)
         guess = input('Give me some letters please \n')
         if len(guess) == 1 and guess.isalpha(
         ) and guess not in guessed_letters:
-            guessed_letters.append(guess)
-            word_list = list(correct_word)
-            indices = [
-               i for i, letter in enumerate(word) if letter == guess.upper()
-            ]
-            for index in indices:
-                word_list[index] = guess
-                correct_word = "".join(word_list)
-                print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
-                     f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
+            if guess.upper() in word:
+                guessed_letters.append(guess)
+                word_list = list(correct_word)
+                indices = [
+                    i for i, letter in enumerate(word) if letter == guess.upper()
+                ]
+                for index in indices:
+                    word_list[index] = guess
+                    correct_word = "".join(word_list)
+                    print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
+                         f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
             if '_' not in correct_word:
                 print("End me!")
                 completed = True
@@ -113,6 +114,7 @@ def begin_game(word):
             print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
                   f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
             lives -= 1
+            print(lives)
             guessed_letters.append(guess)
     if completed:
         win_sign()
