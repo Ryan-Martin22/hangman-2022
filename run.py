@@ -12,7 +12,7 @@ class Color:
 
 def get_new_word():
     """
-    Selects a random word from the words.txt file at the beginning of the game
+    Selects a random word from the words.txt file opened in read format at the beginning of the game
     and ensures a new random word evry time the game is played.
     """
     with open('words.txt', 'r') as word_list:
@@ -80,7 +80,7 @@ def begin_game(word):
     lives = 6 
     print("Help Me!!!\n")
     print(f"Lives left {lives}\n")
-    while completed is not True: 
+    while completed is not True and lives > 0:
         print(hangman_construction(lives))
         print(correct_word)
         guess = input('Give me some letters please \n')
