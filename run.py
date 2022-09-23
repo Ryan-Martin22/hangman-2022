@@ -83,7 +83,6 @@ def begin_game(word):
     while completed is not True and lives > 0:
         print(hangman_construction(lives))
         print(correct_word)
-        print(word)
         guess = input('Give me some letters please \n')
         if len(guess) == 1 and guess.isalpha(
         ) and guess not in guessed_letters:
@@ -99,7 +98,6 @@ def begin_game(word):
                     print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
                          f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
                 if '_' not in correct_word:
-                    print("End me!")
                     completed = True   
             else:
                 print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
