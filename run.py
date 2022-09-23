@@ -138,7 +138,7 @@ def start_game_again():
         word = get_new_word()
         begin_game(word)
     elif start_again_option == "N":
-        introduction_page()
+        exit()
     else:
         print(f"{Color.YELLOW}Time to decide {Color.BLUE}Y {Color.YELLOW}"
               f"or {Color.BLUE}N{Color.YELLOW}. You chose "
