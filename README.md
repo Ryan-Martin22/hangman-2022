@@ -69,7 +69,14 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 * He or she will be greeted with an eyecatching green win message. 
 * He will also be asked if he or she would like play again. this is essential for re-playability. If the user selects Y then a new word will be used and the game will start again. If N is selected then the program will finish. 
 
-![Win](assets/images/win.png)
+![Win](assets/images/win.png) 
+
+### Run out of lives 
+
+* If the user fails to guess the correct word and runs out of lives, he or she will be presented with a red fail message as the man is essential hung. 
+* He will also be asked if he or she would like play again. this is essential for re-playability. If the user selects Y then a new word will be used and the game will start again. If N is selected then the program will finish. 
+
+![Lose](assets/images/lose.png)
 
 
 
