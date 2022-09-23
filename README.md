@@ -52,9 +52,24 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 ### Guessed the same letter 
 
 * If the user guesses a letter he or she has already guessed, he or she will be shown a message stating that fact and also what letter the have guessed already. 
-* No lives will be taken from the user and the hangman will remain the same. The message is presented in yellow to avt as a warning to the user. 
+* No lives will be taken from the user and the hangman will remain the same. The message is presented in yellow to act as a warning to the user. 
 
-![Already Guessed](assets/images/already-guessed.png)
+![Already Guessed](assets/images/already-guessed.png) 
+
+### Guessed more than one letter
+
+* If a user enters more than one letter he or she will be presented with a message informing them this is not allowed.The message will be presented in yellow to act as a warning. 
+* No lives will be taken from the user and the hangman will remain the same. The message is presented in yellow to act as a warning to the user.
+
+![Guessed more than one letter](assets/images/same-word.png)
+
+### Guess the correct word 
+
+* If the user guess the correct word before running out of lives then the game is complete. 
+* He or she will be greeted with an eyecatching green win message. 
+* He will also be asked if he or she would like play again. this is essential for re-playability. If the user selects Y then a new word will be used and the game will start again. If N is selected then the program will finish. 
+
+![Win](assets/images/win.png)
 
 
 
