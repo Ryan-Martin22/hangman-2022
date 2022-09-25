@@ -121,11 +121,21 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 
 ![Python Testing](assets/images/pep8.png)
 
+## Input Testing 
+
+* Implementation - I used the Python3 run.py in the terminal to run my code and test invalid inputs. I also used the deployed page to test this also. 
+* Test - I continously entered invalid inputs when prompted to enter data. 
+* Result - Some invalid input errors accured and were noted as fixed bugs.
+* Verdict - After fixing these bugs and errors by changing my code, the test was passed. 
+
 ## Functionality Testing
 
-* Implementation -
-* Test - 
-* Result - 
+* Implementation - I deployed my site on Heroku to test gameplay functionality. 
+* Test - During the course of this test, my family and friends played the game numerous times. i instructed them to try and find arrors in the games functionality and report back their findings.
+* Result - After the extensive testing carried out by my peers, no errors were found and only positive feedback was reported. 
+* Verdict - Game functionality testing was conducted throughly and the test was passed. 
+
+
 
 
 
