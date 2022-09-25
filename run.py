@@ -1,5 +1,6 @@
 import random
 
+
 class Color:
     """
     Sets colors to be called for different texts.
@@ -10,9 +11,10 @@ class Color:
     RED = '\033[91m'
     YELLOW = '\u001b[33m'
 
+
 def get_new_word():
     """
-    Selects a random word from the words.txt file opened in read format 
+    Selects a random word from the words.txt file opened in read format
     at the beginning of the game.
     Ensures a new random word evry time the game is played.
     """
@@ -26,12 +28,12 @@ def introduction_page():
     """
     The initial introduction to the hangman game.
     The player can read the instuctions or begin the game.
-    """   
+    """
     word = get_new_word()
     hangman_sign()
     print(hangman_construction(0))
     print(f"Type {Color.BLUE}1 {Color.RESET} to start the game\n")
-    print(f"Type {Color.BLUE}2 {Color.RESET} if you would like to read the instructions")
+    print(f"Type {Color.BLUE}2 {Color.RESET} to read the instructions")
     selection = False
     while not selection:
         decision = input("\n")
@@ -64,19 +66,21 @@ def game_instructions():
     begin = input("Press the enter key to begin the game.\n")
     introduction_page()
 
+
 def begin_game(word):
     """
-    Starts the game for the user 
+    Starts the game for the user
     checks if the letter the player inputs is in the hidden word.
-    if the letter is correct,game will iterate through hidden word and letter will go into
-    correct position. if incorrect,a message will be relayed to the user.
+    if the letter is correct,game will iterate through hidden word
+    and letter will go into correct position.
+    if incorrect,a message will be relayed to the user.
     player can see how many lives are left to complete the game.
 
     """
     correct_word = "_" * len(word)
     completed = False
     guessed_letters = []
-    lives = 6 
+    lives = 6
     print("Help Me!!!\n")
     print(f"Lives left {lives}\n")
     while completed is not True and lives > 0:
@@ -88,29 +92,31 @@ def begin_game(word):
             if guess.upper() in word:
                 guessed_letters.append(guess)
                 word_list = list(correct_word)
-                indices = [
-                    i for i, letter in enumerate(word) if letter == guess.upper()
-                ]
+                indices = [i for i, letter in enumerate(
+                    word) if letter == guess.upper()]
                 for index in indices:
                     word_list[index] = guess
                     correct_word = "".join(word_list)
                     print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
-                         f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
+                          f" {Color.GREEN}is in the word! \n{Color.RESET}")
                 if '_' not in correct_word:
                     completed = True
             else:
                 print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
-                f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
+                      f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
                 lives -= 1
                 print(f"Lives left: {lives} \n")
                 guessed_letters.append(guess)
-                print("You have already tried these: " + ", ".join(guessed_letters) + "\n")
+                print(
+                    "Tried these already: " +
+                    ", ".join(guessed_letters) +
+                    "\n")
         elif len(guess) != 1:
             print(f"\n{Color.YELLOW}Oops!, "
-                f"Your only allowed to guess {Color.RESET}1"
-                f" {Color.YELLOW}letter at a time.")
+                  f"Your only allowed to guess {Color.RESET}1"
+                  f" {Color.YELLOW}letter at a time.")
             print(f"You used {Color.RESET}{len(guess)} "
-                f"{Color.YELLOW}characters.\n{Color.RESET}")
+                  f"{Color.YELLOW}characters.\n{Color.RESET}")
         elif guess in guessed_letters:
             print(f"\n{Color.YELLOW}You have already  used me"
                   f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
@@ -133,21 +139,22 @@ def start_game_again():
     If not, returns to main screen.
     """
     start_again_option = input(f"\nWould you like to try again? "
-                           f"{Color.BLUE}Y{Color.RESET}/{Color.BLUE}N\n"
-                           f"{Color.RESET}").upper()
+                               f"{Color.BLUE}Y{Color.RESET}/{Color.BLUE}N\n"
+                               f"{Color.RESET}").upper()
     if start_again_option == "Y":
         word = get_new_word()
         begin_game(word)
     elif start_again_option == "N":
         exit()
     else:
-        print(f"{Color.YELLOW}Time to decide {Color.BLUE}Y {Color.YELLOW}"
-              f"or {Color.BLUE}N{Color.YELLOW}. You chose "
-              f"{Color.RESET}{start_again_option}{Color.YELLOW}.{Color.RESET}\n")
+        print(
+            f"{Color.YELLOW}Time to decide {Color.BLUE}Y {Color.YELLOW}"
+            f"or {Color.BLUE}N{Color.YELLOW}. You chose "
+            f"{Color.RESET}{start_again_option}{Color.YELLOW}.{Color.RESET}\n")
         start_game_again()
 
-def hangman_construction(lives):
 
+def hangman_construction(lives):
     """
     Shows the user how man lives are left before the games ends.
     """
@@ -164,7 +171,7 @@ def hangman_construction(lives):
                       | /
         ______________ /
         """,
-        f"""
+              f"""
               =======
               |/    |
               |     {Color.RED}@{Color.RESET}
@@ -177,7 +184,7 @@ def hangman_construction(lives):
                       | /
         ______________ /
         """,
-        f"""
+              f"""
               =======
               |/    |
               |     {Color.RED}@{Color.RESET}
@@ -190,7 +197,7 @@ def hangman_construction(lives):
                       | /
         ______________ /
         """,
-        f"""
+              f"""
               =======
               |/    |
               |     {Color.RED}@{Color.RESET}
@@ -203,7 +210,7 @@ def hangman_construction(lives):
                       | /
         ______________ /
         """,
-        f"""
+              f"""
               =======
               |/    |
               |     {Color.RED}@{Color.RESET}
@@ -216,7 +223,7 @@ def hangman_construction(lives):
                       | /
         ______________ /
         """,
-        f"""
+              f"""
               =======
               |/    |
               |     {Color.RED}@{Color.RESET}
@@ -229,7 +236,7 @@ def hangman_construction(lives):
                       | /
         ______________ /
         """,
-        """
+              """
               =======
               |/    |
               |
@@ -242,10 +249,8 @@ def hangman_construction(lives):
                       | /
         ______________ /
         """
-    ]
+              ]
     return stages[lives]
-
-
 
 
 def hangman_sign():
@@ -270,7 +275,7 @@ def win_sign():
     to let them know they were correct.
     """
     print(
-          f"""{Color.GREEN}
+        f"""{Color.GREEN}
      :::       ::: ::::::::::: ::::    :::
     :+:       :+:     :+:     :+:+:   :+:
    +:+       +:+     +:+     :+:+:+  +:+
@@ -279,7 +284,7 @@ def win_sign():
 #+#+# #+#+#      #+#     #+#   #+#+#
 ###   ###   ########### ###    ####
       {Color.RESET}"""
-        )
+    )
 
 
 def lose_sign():
@@ -288,7 +293,7 @@ def lose_sign():
     to let them know the lost the game.
     """
     print(
-          f"""{Color.RED}
+        f"""{Color.RED}
             ::::::::::   :::     ::::::::::: :::
            :+:        :+: :+:       :+:     :+:
           +:+       +:+   +:+      +:+     +:+
@@ -297,7 +302,8 @@ def lose_sign():
        #+#      #+#     #+#     #+#     #+#
       ###      ###      ### ########### ##########
         {Color.RESET}"""
-        )
+    )
 
 
 introduction_page()
+
