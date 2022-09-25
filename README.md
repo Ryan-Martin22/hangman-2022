@@ -155,7 +155,21 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 * This feature was essential to the replayability of the game, a lot of times whilst playing, the word was not correctly guessed and the lives ran out. 
 * So having the otion to start agin proved throughly enjoyable and a key feature. 
 
+# Bugs 
 
+* Bug - Hangman structure was not visible when correct or incorrect inputs entered.
+  * Fix - Print(hangman_construction{lives}) needed to be placed inside the while loop for this function to work. 
+
+* Bug - When asked to Play Again and the N key was entered, the user was taken back to the main page instead of the program ending.
+   * Fix - exit() was used to end the program. 
+
+* Bug -  Game was on a continous loop and went into minus lives.
+   * Fix - Lives > 0 needed to ne added to the while loop so the fail sign shows when lives reach 0. 
+
+* Bugs - User input was showing as incorrect even when letter was in the hidden word.
+   * Fix - User input needed to be convert using .upper so that the input would be considered valid. 
+
+   
 
 
 
