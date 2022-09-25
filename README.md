@@ -188,8 +188,16 @@ Deploying
 * Manually you have control over when the app should be deployed, but you have to remember to do it.
 12. Heroku will have a link to the live web page.
 
+# Credits and References. 
 
+* [Kite](https://www.youtube.com/watch?v=m4nEnsavl6w) - Youtube tutorial on how to create a basic hangman game. 
+* [Li Haoyi](https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html) - Website were i found the code for the colours used in the Hangman game. 
+* [Random Lists](https://www.randomlists.com/random-words?dup=false&qty=1000) - website which provided the list of random words i used. 
+* [NeuralNine](https://www.youtube.com/watch?v=5x6iAKdJB6U) - Tutorial on how to get a random word from a .txt file. Used to get the words that enabled the game to work. 
+* [ACSII Art Generator](https://patorjk.com/software/taag/#p=display&f=Nancyj-Underlined&t=Hello%20there) - Used to get the Hangman sign and also the win and lose message. 
 
+# Acknowledgements 
+* My mentor Richard Wells for all his invaluable advice and hard work to helo me complete this project and development my coding knowledge. 
 
 
 
