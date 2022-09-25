@@ -32,7 +32,7 @@ def introduction_page():
     print(hangman_construction(0))
     print(f"Type {Color.BLUE}1 {Color.RESET} to start the game\n")
     print(f"Type {Color.BLUE}2 {Color.RESET} if you would like to read the instructions")
-    selection = False 
+    selection = False
     while not selection:
         decision = input("\n")
         if decision == "1":
@@ -46,10 +46,10 @@ def introduction_page():
                   f"{Color.BLUE} 2 {Color.YELLOW}to make your decision."
                   f"{Color.RESET}")
 
-              
+
 def game_instructions():
     """
-    Gives the player the instructions to play the game. 
+    Gives the player the instructions to play the game.
     """
     print(
         """
@@ -97,24 +97,24 @@ def begin_game(word):
                     print(f"\n{Color.GREEN}Great!! {Color.RESET}{guess}"
                          f" {Color.GREEN}is in the word! Keep going\n{Color.RESET}")
                 if '_' not in correct_word:
-                    completed = True   
+                    completed = True
             else:
                 print(f"\n{Color.YELLOW}Oh no! {Color.RESET}{guess}"
                 f"{Color.YELLOW} isn't in the word!\n{Color.RESET}")
                 lives -= 1
                 print(f"Lives left: {lives} \n")
                 guessed_letters.append(guess)
-                print("You have already tried these: " + ", ".join(guessed_letters) + "\n")       
+                print("You have already tried these: " + ", ".join(guessed_letters) + "\n")
         elif len(guess) != 1:
             print(f"\n{Color.YELLOW}Oops!, "
                 f"Your only allowed to guess {Color.RESET}1"
                 f" {Color.YELLOW}letter at a time.")
             print(f"You used {Color.RESET}{len(guess)} "
-                f"{Color.YELLOW}characters.\n{Color.RESET}")       
+                f"{Color.YELLOW}characters.\n{Color.RESET}")
         elif guess in guessed_letters:
             print(f"\n{Color.YELLOW}You have already  used me"
                   f" {Color.RESET}{guess}{Color.YELLOW}!{Color.RESET}")
-            lives -= 1      
+            lives -= 1
     if completed:
         win_sign()
         print(f"{Color.GREEN}Well Done!"
@@ -151,7 +151,7 @@ def hangman_construction(lives):
     """
     Shows the user how man lives are left before the games ends.
     """
-    stages = [  f"""
+    stages = [f"""
               =======
               |/    |
               |     {Color.RED}@{Color.RESET}
@@ -259,7 +259,7 @@ def hangman_sign():
           ████████████████╔██╗ ████║  █████╔████╔███████████╔██╗ ██║
           ██╔══████╔══████║╚██╗████║   ████║╚██╔╝████╔══████║╚██╗██║
           ██║  ████║  ████║ ╚████╚██████╔██║ ╚═╝ ████║  ████║ ╚████║
-          ╚═╝  ╚═╚═╝  ╚═╚═╝  ╚═══╝╚═════╝╚═╝     ╚═╚═╝  ╚═╚═╝  ╚═══                                                                                   
+          ╚═╝  ╚═╚═╝  ╚═╚═╝  ╚═══╝╚═════╝╚═╝     ╚═╚═╝  ╚═╚═╝  ╚═══
         """
     )
 
@@ -271,15 +271,14 @@ def win_sign():
     """
     print(
           f"""{Color.GREEN}
-     :::       ::: ::::::::::: ::::    ::: 
-    :+:       :+:     :+:     :+:+:   :+:  
-   +:+       +:+     +:+     :+:+:+  +:+   
-  +#+  +:+  +#+     +#+     +#+ +:+ +#+    
- +#+ +#+#+ +#+     +#+     +#+  +#+#+#     
-#+#+# #+#+#      #+#     #+#   #+#+#      
-###   ###   ########### ###    ####  
-            
-        {Color.RESET}"""
+     :::       ::: ::::::::::: ::::    :::
+    :+:       :+:     :+:     :+:+:   :+:
+   +:+       +:+     +:+     :+:+:+  +:+
+  +#+  +:+  +#+     +#+     +#+ +:+ +#+
+ +#+ +#+#+ +#+     +#+     +#+  +#+#+#
+#+#+# #+#+#      #+#     #+#   #+#+#
+###   ###   ########### ###    ####
+      {Color.RESET}"""
         )
 
 
@@ -290,13 +289,13 @@ def lose_sign():
     """
     print(
           f"""{Color.RED}
-            ::::::::::   :::     ::::::::::: :::  
-           :+:        :+: :+:       :+:     :+:   
-          +:+       +:+   +:+      +:+     +:+    
-         :#::+::#  +#++:++#++:     +#+    +#+     
-        +#+       +#+    +#+     +#+     +#+      
-       #+#      #+#     #+#     #+#     #+#       
-      ###      ###      ### ########### ########## 
+            ::::::::::   :::     ::::::::::: :::
+           :+:        :+: :+:       :+:     :+:
+          +:+       +:+   +:+      +:+     +:+
+         :#::+::#  +#++:++#++:     +#+    +#+
+        +#+       +#+    +#+     +#+     +#+
+       #+#      #+#     #+#     #+#     #+#
+      ###      ###      ### ########### ##########
         {Color.RESET}"""
         )
 
