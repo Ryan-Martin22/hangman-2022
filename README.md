@@ -133,7 +133,29 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 * Implementation - I deployed my site on Heroku to test gameplay functionality. 
 * Test - During the course of this test, my family and friends played the game numerous times. i instructed them to try and find arrors in the games functionality and report back their findings.
 * Result - After the extensive testing carried out by my peers, no errors were found and only positive feedback was reported. 
-* Verdict - Game functionality testing was conducted throughly and the test was passed. 
+* Verdict - Game functionality testing was conducted throughly and the test was passed.
+
+## Testing User Stories
+
+1. As a user, I want a game game that is fun and easy to play.
+
+* The basic UX and functionality of this game made it very simple to use and suit able for all ages.
+* The simple key only input method meant it was etremely easy the go through the game with minimal effort and the game play was smooth at every point.
+
+2.  As a user, I want to be able to view the instructions and/or rules of the game.
+
+* Upon entering the site, an option to view the instructions was clearly visible. 
+* The instructions were clear and concise and made it clear what the rules of the game are. 
+
+3.  As a user, I want to get feedback whether correct or incorrect to help with game progression.
+* A key feature was that whenever an incorrect letter was used, a warning would appear and a visible representation was clear to see. 
+* This was also the case with correct answers and also when i completed the game or failed to do so, a visual representation saying Win or Fail was shown. 
+
+4.  As a user, I want to be able to replay the game as many times as possible. 
+* This feature was essential to the replayability of the game, a lot of times whilst playing, the word was not correctly guessed and the lives ran out. 
+* So having the otion to start agin proved throughly enjoyable and a key feature. 
+
+
 
 
 
