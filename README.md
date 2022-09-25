@@ -18,6 +18,20 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 
 ![Logic flow](assets/images/flow%20chart.png)
 
+# User Stories
+
+* As a user, I want a game game that is fun and easy to play. 
+* As a user, I want to be able to view the instructions and/or rules of the game.
+* As a user, I want to get feedback whether correct or incorrect to help with game progression.
+* As a user, I want to be able to replay the game as many times as possible. 
+
+# Developers Objectives 
+
+* Provide a game with valid logic flow and a game that is easy to user.
+* Provide a simple user interface.
+* Provide a challenging game for the user gto play.
+
+
 # Features 
 
 ## Existing Features 
@@ -94,7 +108,10 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 
 * Python - Used to create all the games code. 
 * HTML - Code Institute template.
-* JavaScript - Code Institute template. 
+* JavaScript - Code Institute template.
+
+# Testing 
+
 
 
 

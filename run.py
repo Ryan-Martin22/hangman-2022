@@ -1,4 +1,4 @@
-import random 
+import random
 
 class Color:
     """
@@ -12,20 +12,21 @@ class Color:
 
 def get_new_word():
     """
-    Selects a random word from the words.txt file opened in read format at the beginning of the game
-    and ensures a new random word evry time the game is played.
+    Selects a random word from the words.txt file opened in read format 
+    at the beginning of the game.
+    Ensures a new random word evry time the game is played.
     """
     with open('words.txt', 'r') as word_list:
         words = word_list.readlines()
     any_word = random.choice(words)[:-1].upper()
-    return any_word 
+    return any_word
 
 
 def introduction_page():
     """
     The initial introduction to the hangman game.
-    The player can select to read the instuctions or begin the game straight away.
-    """    
+    The player can read the instuctions or begin the game.
+    """   
     word = get_new_word()
     hangman_sign()
     print(hangman_construction(0))
@@ -62,8 +63,6 @@ def game_instructions():
 
     begin = input("Press the enter key to begin the game.\n")
     introduction_page()
-    
-
 
 def begin_game(word):
     """
@@ -72,7 +71,7 @@ def begin_game(word):
     if the letter is correct,game will iterate through hidden word and letter will go into
     correct position. if incorrect,a message will be relayed to the user.
     player can see how many lives are left to complete the game.
-    
+
     """
     correct_word = "_" * len(word)
     completed = False
