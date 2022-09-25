@@ -112,6 +112,21 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 
 # Testing 
 
+## Python Testing 
+
+* Implementation - Python testing was done by running my code through PEP8. 
+* Test - To conduct this test i copied my code into the PEP8 tester and pressed check code. 
+* Result - A number of errors appeared when testing my code, thes arrors did not affect the funtionality but did not conform to Python testing standards.
+* Verdict - With the errors identified, I proceeded to correct all errors and put mu code through the test again. The code then passed with no errors. 
+
+![Python Testing](assets/images/pep8.png)
+
+## Functionality Testing
+
+* Implementation -
+* Test - 
+* Result - 
+
 
 
 
