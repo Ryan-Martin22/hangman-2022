@@ -169,7 +169,24 @@ The game can be found [**here**](https://hangman-2022.herokuapp.com/)
 * Bugs - User input was showing as incorrect even when letter was in the hidden word.
    * Fix - User input needed to be convert using .upper so that the input would be considered valid. 
 
-   
+
+# Deployment 
+
+Deploying
+1. Push your code to GitHub.
+2. Log in or Sign up to Heroku where you need to create a new app.
+3. Select a unique name.
+4. In the settings tab reveal the config vars, for this project one had to be added as per Code Institute's guidance.
+5. For KEY, input PORT and for VALUE, input 8000 and click add.
+6. Below that, click add buildpack, select Python and save.
+7. Click add buildpack again, now select Nodejs and save.
+8. Python should be above Nodejs on the buildpacks list.
+9. Go to deploy tab and for deployment method select GitHub and connect your GitHub account.
+10. When prompted enter the repository you want to deploy, search and once found connect it.
+11. Now you can either set it to automatically or manually deploy the appropriate branch.
+* Automatically will deploy the app everytime you push something to GitHub.
+* Manually you have control over when the app should be deployed, but you have to remember to do it.
+12. Heroku will have a link to the live web page.
 
 
 
